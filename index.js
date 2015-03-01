@@ -1,15 +1,13 @@
-var _ = require('lodash');
-
 module.exports = function(model) {
   model.methods = model.methods || {};
   model.statics = model.statics || {};
   
-  _.each(model.methods, function(fn, name) {
-    model.prototype[name] = fn;
+  Object.keys(model.methods).forEach(function(name) {
+    model.prototype[name] = model.methods[name];
   });
   
-  _.each(model.statics, function(fn, name) {
-    model[name] = fn;
+  Object.keys(model.statics).forEach(function(name) {
+    model[name] = model.statics[name];
   });
   
   model.method = function(name, fn) {
