@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/immodel/methods/issues"
   },
-  "homepage": "https://github.com/immodel/methods"
+  "homepage": "https://github.com/immodel/methods",
+  "devDependencies": {
+    "mocha": "^2.2.0"
+  }
 }
