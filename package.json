@@ -26,5 +26,8 @@
   "homepage": "https://github.com/immodel/methods",
   "devDependencies": {
     "mocha": "^2.2.0"
+  },
+  "dependencies": {
+    "immodel-base": "git://github.com/immodel/base"
   }
 }
