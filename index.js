@@ -1,13 +1,13 @@
-module.exports = function(model) {  
-  model.method = function(name, fn) {
-    return this.use(function(model) {
-      model.prototype[name] = fn;
+module.exports = function() {  
+  this.method = function(name, fn) {
+    return this.use(function() {
+      this.prototype[name] = fn;
     });
   };
 
-  model.static = function(name, fn) {
-    return this.use(function(model) {
-      model[name] = fn;
+  this.static = function(name, fn) {
+    return this.use(function() {
+      this[name] = fn;
     });
   };
 };
